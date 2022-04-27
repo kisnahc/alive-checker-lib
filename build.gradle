@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = '11'
+
+group 'org.atto'
+version '0.0.1-SNAPSHOT_v1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+
+    implementation 'org.slf4j:slf4j-api:1.7.33'
+    implementation 'org.slf4j:slf4j-simple:1.7.33'
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
